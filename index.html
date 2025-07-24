@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>  
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+  <style>
+/* nav.section{} */
+/* Reset and fonts */
+body {
+  margin: 0;
+  font-family: 'Exo', sans-serif;
+ background: #F5F8FF;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+    font-family: "Pinyon Script", cursive;
+  font-style: normal;
+}
+
+a:hover {
+  color: red;
+}
+
+/* Header Container */
+.header {
+  padding: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Navbar layout */
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+/* Logo */
+.logo {
+  width: 135px;
+  height: 82px;
+  background-image: url('B12A02-Responsive-Flowers/assets/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+/* Mobile menu button */
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Exo', sans-serif;
+}
+
+.menu-button:hover {
+  color: orange;
+}
+
+/* Mobile links (hidden by default) */
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+/* Hidden utility */
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+/* @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+} */
+
+   /* Base Styles */
+   /* mid section{} */
+   /* Section container */
+.hero-section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+
+/* Text content */
+.hero-content h1 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.hero-content .highlight {
+  color: #ea580c; /* orange-600 */
+}
+
+.hero-content p {
+  margin-top: 24px;
+  color: #4b5563; /* gray-600 */
+  font-size: 19px;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Image section */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Our Plants section */
+.plant-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+
+.plant-section h2 span {
+  color: #ea580c;
+}
+
+.plant-section .description {
+  margin-top: 16px;
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* .fpr card{} */
+ .jinu {
+      font-family: sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    
+
+    .description p {
+      text-align: center;
+      margin-top: 16px;
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-left: 150px;
+      margin-right: 150px;
+    }
+
+    /* @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 0%;
+        margin-left: 0%;
+      }
+    } */
+
+    .card {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .card p.price {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card button {
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: darkorange;
+    }
+    /* .3rd{} */
+     .body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+.container-2 {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .image-box-2, .text-box {
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .image-box-2 {
+      position: relative;
+    }
+
+    .image-box-2 img.main {
+      width: 100%;
+    }
+
+    .image-box-2 img.badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 100px;
+    }
+
+    .text-box {
+      padding-left: 30px;
+    }
+
+    .text-box h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+    }
+
+    .text-box ul {
+      font-size: 20px;
+      padding-left: 20px;
+      line-height: 1.6;
+      color: #555;
+      font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+    }
+    
+    /* end of this section{} */
+    /* 6th section? */
+    .h5-{
+      color: #E95A08;
+text-align: center;
+font-family: "Noto Serif";
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    }
+    #h6-{
+      color: #000;
+font-family: "Noto Serif";
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    }
+    .p-3{
+color: rgba(0, 0, 0, 0.50);
+text-align: center;
+margin-top: 16px;
+  font-size: 16px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+    }
+    /* end of 6th section. */
+    /* 7th section.{} */
+.body-2 {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .promo-container-1 {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .left-column-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .promo-card-1 {
+      position: relative;
+      width: 280px;
+      height: 160px;
+      overflow: hidden;
+      color: #fff;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .promo-card-1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .promo-text {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      font-size: 18px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .promo-text span {
+      display: block;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .right-card {
+      position: relative;
+      width: 400px;
+      height: 340px;
+      overflow: hidden;
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .right-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .right-text {
+      position: absolute;
+      bottom: 25px;
+      left: 25px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      align-items: center;
+    }
+
+    .right-text span {
+      display: block;
+      font-size: 16px;
+      font-weight: normal;
+    }
+/* 7th section .{} */
+.cta-1{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.cta {
+      background-image: url(B12A02-Responsive-Flowers/assets/news-letter-bg.png);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      color: #FFF;
+text-align: center;
+font-family: "Noto Serif";
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+    }
+
+    .cta input[type="email"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 10px;
+      background-color: #4b5563;
+width: 644px;
+height: 50px;
+padding: 8px 20px;
+align-items: center;
+    }
+
+    .cta button {
+      padding: 10px 20px;
+      background-color: #f16521;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+/* end 7th.{} */
+/* .last{} */
+.footer {
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+  margin-b0ttom: 50px;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin: 10px 0;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.logo-img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+.social-icons{
+  display: flex;
+  gap: 10px;
+}
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+}
+
+    @media (max-width: 768px) {
+
+
+      .image-box-2, .text-box {
+        width: 100%;
+        padding: 0;
+      }
+
+      .text-box {
+        margin-top: 20px;
+        padding-left: 0;
+      }
+
+      .text-box h2 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .text-box ul {
+        padding-left: 15px;
+      }
+
+      .image-box-2 img.badge {
+        width: 80px;
+        top: 10px;
+        right: 10px;
+      }
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-right: 0%;
+        margin-left: 0%;
+      }
+       .nav-links {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    }
+      .promo-container-1 {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .right-card {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+      }
+
+      .left-column-1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .promo-card-1 {
+      width: 90%;
+        min-width: 180px;
+        height: 150px;
+      }
+ 
+       .cta input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      .cta button {
+        width: 100%;
+      }
+       .hero {
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-container {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .social-icons {
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+  }
+    }
+    @media (min-width: 768px) {
+  .hero-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+  </style>
+</head>
+<body>
+    <header class="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="logo"></div>
+
+        <!-- Desktop Menu -->
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Login</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button id="menu-toggle" class="menu-button">🛒</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-links hidden">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+        <a href="#">🛒 Cart ($56)</a>
+      </div>
+    </nav>
+  </header>
+
+   <section class="hero-section">
+  <!-- Text content -->
+  <div class="hero-content">
+    <h1>
+      ALWAYS <span class="highlight">FRESH</span><br />
+      <span class="highlight">FLOWERS</span>
+    </h1>
+    <p>
+      Indulge your senses with the beauty and fragrance of our fresh flower
+      shop. From classic roses to exotic blooms, we offer a variety of fresh
+      flowers that are perfect for any occasion.
+    </p>
+  </div>
+
+  <!-- Image -->
+  <div class="hero-image">
+    <img src="B12A02-Responsive-Flowers/assets/hero-flower.png" alt="Flowers" />
+  </div>
+</section>
+
+<section class="plant-section">
+  <div class="container">
+     <h2 class="h5-">
+    Our <span id="h6-">Plants</P></span> 
+   </h2>
+    <p class="description">
+      Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.
+    </p>
+  </div>
+</section>
+
+    <div class="grid">
+      <!-- Repeat this card -->
+      <div class="card">
+        <img src="sample-flower-image.png" alt="Flower">
+        <h3>Lily Blossom</h3>
+        <p class="price">20 USD</p>
+        <button>ADD TO CART</button>
+      </div>
+
+      <div class="card">
+        <img src="sample-flower-image.png" alt="Flower">
+        <h3>Lily Blossom</h3>
+        <p class="price">20 USD</p>
+        <button>ADD TO CART</button>
+      </div>
+
+      <div class="card">
+        <img src="sample-flower-image.png" alt="Flower">
+        <h3>Lily Blossom</h3>
+        <p class="price">20 USD</p>
+        <button>ADD TO CART</button>
+      </div>
+
+      <div class="card">
+        <img src="sample-flower-image.png" alt="Flower">
+        <h3>Lily Blossom</h3>
+        <p class="price">20 USD</p>
+        <button>ADD TO CART</button>
+      </div>
+       <div class="card">
+        <img src="sample-flower-image.png" alt="Flower">
+        <h3>Lily Blossom</h3>
+        <p class="price">20 USD</p>
+        <button>ADD TO CART</button>
+      </div>
+
+      <div class="card">
+        <img src="sample-flower-image.png" alt="Flower">
+        <h3>Lily Blossom</h3>
+        <p class="price">20 USD</p>
+        <button>ADD TO CART</button>
+      </div>
+
+      <div class="card">
+        <img src="sample-flower-image.png" alt="Flower">
+        <h3>Lily Blossom</h3>
+        <p class="price">20 USD</p>
+        <button>ADD TO CART</button>
+      </div>
+
+      <div class="card">
+        <img src="sample-flower-image.png" alt="Flower">
+        <h3>Lily Blossom</h3>
+        <p class="price">20 USD</p>
+        <button>ADD TO CART</button>
+      </div>
+    </div>
+    </div>
+  </div>
+  </section>
+  <section class="body">
+   <div class="container-2">
+    <div class="image-box-2">
+      <img src="B12A02-Responsive-Flowers/assets/flower-store.png" alt="Flower Arrangement" class="main">
+      <img src="B12A02-Responsive-Flowers/assets/trusted-badge.png" alt="Trusted Seller Badge" class="badge">
+    </div>
+    <div class="text-box">
+      <h2>Flower & Plants Lover</h2>
+      <ul>
+        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
+        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
+        <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.</li>
+      </ul>
+    </div>
+  </div>
+  </section>
+  <section class="raw">
+   <h2 class="h5-">
+    Latest <span id="h6-">Deals</span> 
+   </h2>
+
+   <p class="p-3">
+    Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh.
+   </p>
+  </section>
+  <section class="body-2">
+    <div class="promo-container-1">
+    <div class="left-column-1">
+      <div class="promo-card-1">
+        <img src="B12A02-Responsive-Flowers/assets/deal-ana.png" alt="Bloom Plant">
+        <div class="promo-text">
+          60% Off | Bloom Plant
+          <span>Shop Now</span>
+        </div>
+      </div>
+      <div class="promo-card-1">
+        <img src="B12A02-Responsive-Flowers/assets/deal-bloom.png" alt="Asa Plant">
+        <div class="promo-text">
+          30% Off | Asa Plant
+          <span>Shop Now</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-card">
+      <img src="B12A02-Responsive-Flowers/assets/deal-zabo.png" alt="Zabo Plant">
+      <div class="right-text">
+        25% Off | Zabo Plant
+        <span>Shop Now</span>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="cta">
+    <div class="cta-1">
+    <h2>Join the colorful <strong>Bunch</strong></h2>
+    <input type="email" placeholder="Enter your email" />
+    <button>Subscribe</button>
+    </div>
+  </section>
+     <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-col ">
+        <img src="B12A02-Responsive-Flowers/assets/logo.png" alt="" class="logo-img">
+        <p>Indulge your senses with the beauty and fragrance of our fresh flower shop.</p>
+      </div>
+
+      <div class="footer-col">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col social-icons">
+        <a href="#"><img src="B12A02-Responsive-Flowers/assets/icon-facebook.png" alt="LinkedIn"></a>
+        <a href="#"><img src="B12A02-Responsive-Flowers/assets/icon-linkedin.png" alt="X"></a>
+        <a href="#"><img src="B12A02-Responsive-Flowers/assets/icon-twitter.png" alt="Facebook"></a>
+        <a href="#"><img src="B12A02-Responsive-Flowers/assets/icon-youtube.png" alt="YouTube"></a>
+      </div>
+
+    </div>
+  </footer>
+    <script>
+    const btn = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>
